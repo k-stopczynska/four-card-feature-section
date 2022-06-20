@@ -1,0 +1,120 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Light-Gray);
+}
+.container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--Very-Light-Gray);
+    margin-bottom: 2rem;
+}
+.header {
+    margin: 3rem auto;
+    text-align: center;
+}
+h1 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+    margin-bottom: 1rem;
+}
+span {
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+h2 {
+    color: var(--Very-Dark-Blue);
+    font-size: 1.2rem;
+}
+p {
+    color: var(--Grayish-Blue);
+}
+.wrapper {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    box-shadow: 0 3px 15px var(--Grayish-Blue);
+    width: 100%;
+}
+.img-wrapper {
+    margin-top: 2em;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: right;
+}
+
+#supervisor {
+    border-top: 6px solid var(--Cyan);
+}
+#team-builder {
+    border-top: 6px solid var(--Red);
+}
+#karma {
+    border-top: 6px solid var(--Orange);
+}
+#calculator {
+    border-top: 6px solid var(--Blue);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media (min-width: 500px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .header {
+        grid-column: span 2;
+        width: 80%;
+    }
+    .wrapper {
+        height: 100%;
+    }
+}
+@media (min-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 75%;
+        gap: 1.5rem;
+    }
+    .header {
+        grid-column: span 3;
+        width: 50%;
+    }
+    #karma {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+    #supervisor,
+    #calculator{
+        grid-row: span 2;
+        height: 50%;
+    }
+}
